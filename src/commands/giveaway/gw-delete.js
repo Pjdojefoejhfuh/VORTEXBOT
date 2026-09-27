@@ -1,4 +1,4 @@
-const { PermissionsBitField } = require('discord.js');
+onst { PermissionsBitField } = require('discord.js');
 const guildConfig = require('../../utils/guildConfig');
 const gw = require('../../utils/giveawayManager');
 

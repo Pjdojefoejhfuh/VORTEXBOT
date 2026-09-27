@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
     name: "say",
     description: "Faire parler le bot",
     async execute(client, message, args) {

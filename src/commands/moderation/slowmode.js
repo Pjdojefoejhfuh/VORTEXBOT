@@ -1,4 +1,4 @@
-const { PermissionFlagsBits } = require('discord.js');
+onst { PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'slowmode',

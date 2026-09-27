@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+onst Discord = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
 const guildconfig = require("../../utils/guildConfig");
 

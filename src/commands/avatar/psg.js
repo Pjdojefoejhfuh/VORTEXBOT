@@ -1,4 +1,4 @@
-const { createCanvas, loadImage } = require('canvas');
+onst { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      message.reply("Erreur génération PSG.");
+      message.reply("Erreur gÃ©nÃ©ration PSG.");
     }
   }
 };

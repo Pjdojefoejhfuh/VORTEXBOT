@@ -1,4 +1,4 @@
-const {
+onst {
     AuditLogEvent,
     ChannelType
 } = require('discord.js');

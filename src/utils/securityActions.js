@@ -1,4 +1,4 @@
-const { PermissionFlagsBits } = require('discord.js');
+onst { PermissionFlagsBits } = require('discord.js');
 const { sendLog } = require('./logHelper');
 
 async function logSecurity(guild, title, details) {

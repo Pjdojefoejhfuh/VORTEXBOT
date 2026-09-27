@@ -1,4 +1,4 @@
-const {
+onst {
   PermissionFlagsBits,
   EmbedBuilder,
   ActionRowBuilder,

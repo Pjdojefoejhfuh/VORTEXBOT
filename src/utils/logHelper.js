@@ -1,4 +1,4 @@
-const guildConfig = require('./guildConfig');
+onst guildConfig = require('./guildConfig');
 const { MessageFlags } = require('discord.js');
 
 const LOG_TYPES = {

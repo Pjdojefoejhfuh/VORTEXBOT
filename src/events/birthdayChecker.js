@@ -1,4 +1,4 @@
-const guildConfig = require('../utils/guildConfig');
+onst guildConfig = require('../utils/guildConfig');
 
 let intervalStarted = false;
 

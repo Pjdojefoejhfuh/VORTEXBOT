@@ -1,4 +1,4 @@
-// src/commands/vote.js
+/ src/commands/vote.js
 const {
   EmbedBuilder,
   ActionRowBuilder,

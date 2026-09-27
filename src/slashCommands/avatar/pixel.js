@@ -1,14 +1,14 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { createCanvas, loadImage } = require('canvas');
+onst { SlashCommandBuilder } = require('discord.js');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('pixel')
-        .setDescription('Transforme un avatar en image pixelisée.')
+        .setDescription('Transforme un avatar en image pixelisÃ©e.')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur à utiliser')
+                .setDescription('Utilisateur Ã  utiliser')
                 .setRequired(false)
         ),
 
@@ -58,7 +58,7 @@ module.exports = {
             const buffer = canvas.toBuffer();
 
             if (buffer.length > 8 * 1024 * 1024) {
-                return await interaction.reply("L'image dépasse 8 Mo.");
+                return await interaction.reply("L'image dÃ©passe 8 Mo.");
             }
 
             await interaction.reply({
@@ -73,12 +73,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur lors de la génération de l'image."
+                    "Erreur lors de la gÃ©nÃ©ration de l'image."
                 );
             }
 
             return await interaction.reply(
-                "Erreur lors de la génération de l'image."
+                "Erreur lors de la gÃ©nÃ©ration de l'image."
             );
         }
     }

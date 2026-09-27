@@ -1,4 +1,4 @@
-const { PermissionsBitField } = require('discord.js');
+onst { PermissionsBitField } = require('discord.js');
 
 module.exports = {
     name: 'ban',

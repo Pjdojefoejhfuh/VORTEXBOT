@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+onst Discord = require('discord.js');
 module.exports = {
     name: 'restart',
     description: 'Redémarre le bot',

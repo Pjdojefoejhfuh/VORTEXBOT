@@ -1,4 +1,4 @@
-const fs = require("fs");
+onst fs = require("fs");
 const path = require("path");
 const { EmbedBuilder } = require("discord.js");
 

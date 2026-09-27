@@ -1,15 +1,15 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { createCanvas, loadImage } = require('canvas');
+onst { SlashCommandBuilder } = require('discord.js');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ps5')
-        .setDescription('Génère une image PS5 avec un avatar.')
+        .setDescription('GÃ©nÃ¨re une image PS5 avec un avatar.')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur à utiliser')
+                .setDescription('Utilisateur Ã  utiliser')
                 .setRequired(false)
         ),
 
@@ -69,12 +69,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur génération PS5."
+                    "Erreur gÃ©nÃ©ration PS5."
                 );
             }
 
             return await interaction.reply(
-                "Erreur génération PS5."
+                "Erreur gÃ©nÃ©ration PS5."
             );
         }
     }

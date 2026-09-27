@@ -1,4 +1,4 @@
-const fs = require("fs");
+onst fs = require("fs");
 const path = require("path");
 const PREVNAMES_FILE = path.join(__dirname, "../../data/prevnames.json");
 

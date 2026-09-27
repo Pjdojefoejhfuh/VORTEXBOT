@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
   name: 'dissection',
   decription: 'Envoie un gif d\'une dissection de sukuna',
     async execute(client, message, args) {

@@ -1,4 +1,4 @@
-const { ActivityType } = require('discord.js');
+onst { ActivityType } = require('discord.js');
 const guildConfig = require('../utils/guildConfig');
 const {
   SoundCloudExtractor,

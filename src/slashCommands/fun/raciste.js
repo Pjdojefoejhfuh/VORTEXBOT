@@ -1,4 +1,4 @@
-const {
+onst {
     SlashCommandBuilder,
     EmbedBuilder
 } = require('discord.js');

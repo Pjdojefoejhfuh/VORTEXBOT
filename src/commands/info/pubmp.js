@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+onst { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'pubmp',

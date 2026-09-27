@@ -1,9 +1,9 @@
-const { createCanvas, loadImage } = require('canvas');
+onst { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
   name: 'roi-lion',
-  description: "Dessine l'avatar d'un utilisateur sur la scène du Roi Lion.",
+  description: "Dessine l'avatar d'un utilisateur sur la scÃ¨ne du Roi Lion.",
 
   async execute(client, message, args) {
     try {
@@ -45,7 +45,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      return message.reply("Erreur lors de la génération de l'image.");
+      return message.reply("Erreur lors de la gÃ©nÃ©ration de l'image.");
     }
   }
 };

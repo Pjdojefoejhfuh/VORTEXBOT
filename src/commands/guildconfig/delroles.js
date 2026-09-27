@@ -1,4 +1,4 @@
-const {
+onst {
     PermissionFlagsBits
 } = require('discord.js');
 

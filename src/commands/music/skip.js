@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
   name: "skip",
   run: async (client, message) => {
 

@@ -1,15 +1,15 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { createCanvas, loadImage } = require('canvas');
+onst { SlashCommandBuilder } = require('discord.js');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('psg')
-        .setDescription('Génère une image PSG avec un avatar.')
+        .setDescription('GÃ©nÃ¨re une image PSG avec un avatar.')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur à utiliser')
+                .setDescription('Utilisateur Ã  utiliser')
                 .setRequired(false)
         ),
 
@@ -67,12 +67,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur génération PSG."
+                    "Erreur gÃ©nÃ©ration PSG."
                 );
             }
 
             return await interaction.reply(
-                "Erreur génération PSG."
+                "Erreur gÃ©nÃ©ration PSG."
             );
         }
     }

@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
   name: "queue",
   run: async (client, message) => {
 

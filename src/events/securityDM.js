@@ -1,4 +1,4 @@
-const { getSecurity } = require('../utils/securityConfig');
+onst { getSecurity } = require('../utils/securityConfig');
 
 module.exports = {
     name: 'messageCreate',

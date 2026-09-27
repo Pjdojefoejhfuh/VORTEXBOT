@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
   name: 'ping',
   description: 'Répond Pong !',
   async execute(client, message, args) {

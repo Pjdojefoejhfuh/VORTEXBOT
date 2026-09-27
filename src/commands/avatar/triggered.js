@@ -1,4 +1,4 @@
-const { createCanvas, loadImage } = require('canvas');
+onst { createCanvas, loadImage } = require('@napi-rs/canvas');
 const coord1 = [-25, -33, -42, -14];
 const coord2 = [-25, -13, -34, -10];
 
@@ -6,7 +6,7 @@ module.exports = {
   name: 'triggered',
 
   async execute(client, message, args) {
-    return message.reply("Commande temporairement indisponible : dépendance GIF non installée.");
+    return message.reply("Commande temporairement indisponible : dÃ©pendance GIF non installÃ©e.");
   }
 };
 

@@ -1,4 +1,4 @@
-module.exports = {
+odule.exports = {
     name: "math",
 
     async execute(message, args) {

@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { createCanvas, loadImage } = require('canvas');
+onst { SlashCommandBuilder } = require('discord.js');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
@@ -9,13 +9,13 @@ module.exports = {
         .addUserOption(option =>
             option
                 .setName('membre')
-                .setDescription('Le membre dont utiliser l’avatar')
+                .setDescription('Le membre dont utiliser lâ€™avatar')
                 .setRequired(false)
         )
         .addBooleanOption(option =>
             option
                 .setName('silhouette')
-                .setDescription('Affiche l’avatar en silhouette')
+                .setDescription('Affiche lâ€™avatar en silhouette')
                 .setRequired(false)
         ),
 
@@ -65,7 +65,7 @@ module.exports = {
             const buffer = canvas.toBuffer();
 
             if (buffer.length > 8 * 1024 * 1024) {
-                return await interaction.reply("L'image dépasse 8 Mo.");
+                return await interaction.reply("L'image dÃ©passe 8 Mo.");
             }
 
             await interaction.reply({
@@ -77,7 +77,7 @@ module.exports = {
         } catch (err) {
             console.error(err);
             await interaction.reply(
-                "Erreur lors de la génération de l'image."
+                "Erreur lors de la gÃ©nÃ©ration de l'image."
             );
         }
     }

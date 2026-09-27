@@ -1,4 +1,4 @@
-const { createCanvas, loadImage } = require('canvas');
+onst { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 
 module.exports = {
@@ -42,7 +42,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      return message.reply("Erreur lors de la génération de l'image.");
+      return message.reply("Erreur lors de la gÃ©nÃ©ration de l'image.");
     }
   }
 };

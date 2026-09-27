@@ -1,4 +1,4 @@
-const { EmbedBuilder } = require('discord.js');
+onst { EmbedBuilder } = require('discord.js');
 const config = require('../../../config.js');
 
 const fetchFn = global.fetch || require('node-fetch');

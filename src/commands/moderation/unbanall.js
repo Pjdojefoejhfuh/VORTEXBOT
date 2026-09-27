@@ -1,4 +1,4 @@
-const { PermissionsBitField, EmbedBuilder } = require("discord.js");
+onst { PermissionsBitField, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "unbanall",
