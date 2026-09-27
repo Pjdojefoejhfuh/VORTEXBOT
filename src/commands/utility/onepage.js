@@ -1,4 +1,4 @@
-onst { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } = require("discord.js");
+nst { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } = require("discord.js");
 const guildConfig = require("../../utils/guildConfig");
 
 const categoryNames = {

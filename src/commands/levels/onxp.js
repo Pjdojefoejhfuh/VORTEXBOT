@@ -1,4 +1,4 @@
-onst guildconfig = require('../../utils/guildConfig');
+nst guildconfig = require('../../utils/guildConfig');
 
 module.exports = {
     name: "onxp",

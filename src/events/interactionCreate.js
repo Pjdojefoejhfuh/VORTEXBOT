@@ -1,4 +1,4 @@
-onst {
+nst {
     ModalBuilder,
     TextInputBuilder,
     TextInputStyle,

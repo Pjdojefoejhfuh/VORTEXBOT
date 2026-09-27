@@ -1,4 +1,4 @@
-onst { SlashCommandBuilder } = require('discord.js');
+nst { SlashCommandBuilder } = require('discord.js');
 const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 

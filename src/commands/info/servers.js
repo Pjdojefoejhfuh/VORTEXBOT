@@ -1,4 +1,4 @@
-onst {
+nst {
   PermissionFlagsBits,
   EmbedBuilder,
   ActionRowBuilder,

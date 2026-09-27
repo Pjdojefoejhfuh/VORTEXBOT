@@ -1,4 +1,4 @@
-onst { EmbedBuilder } = require('discord.js');
+nst { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'pat',

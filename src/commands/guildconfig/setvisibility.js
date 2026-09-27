@@ -1,4 +1,4 @@
-onst { PermissionFlagsBits } = require('discord.js');
+nst { PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'setvisibility',

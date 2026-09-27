@@ -1,4 +1,4 @@
-odule.exports = {
+dule.exports = {
     name: "boosts",
     description: "Afficher le nombre de boosts du serveur",
     async execute(client, message, args) {

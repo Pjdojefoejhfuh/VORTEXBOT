@@ -1,4 +1,4 @@
-onst { PermissionsBitField } = require("discord.js");
+nst { PermissionsBitField } = require("discord.js");
 
 module.exports = {
   name: "setcat",

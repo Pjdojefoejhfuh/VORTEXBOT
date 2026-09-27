@@ -1,4 +1,4 @@
-onst guildConfig = require('../utils/guildConfig');
+nst guildConfig = require('../utils/guildConfig');
 const points = require('../utils/points');
 const config = require('../../config');
 

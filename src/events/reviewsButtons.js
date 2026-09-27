@@ -1,4 +1,4 @@
-onst Database = require('better-sqlite3');
+nst Database = require('better-sqlite3');
 const path = require('path');
 
 const dbPath = path.join(__dirname, '../../data/reviews.sqlite');

@@ -1,4 +1,4 @@
-onst { createCanvas, loadImage } = require('@napi-rs/canvas');
+nst { createCanvas, loadImage } = require('@napi-rs/canvas');
 
 module.exports = {
   name: 'pixel',

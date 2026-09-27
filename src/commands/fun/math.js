@@ -1,4 +1,4 @@
-odule.exports = {
+dule.exports = {
     name: "math",
 
     async execute(message, args) {

@@ -1,4 +1,4 @@
-onst { SlashCommandBuilder } = require('discord.js');
+nst { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()

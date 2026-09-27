@@ -1,4 +1,4 @@
-onst { PermissionFlagsBits, EmbedBuilder } = require('discord.js');
+nst { PermissionFlagsBits, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'alladmins',

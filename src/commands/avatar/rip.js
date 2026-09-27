@@ -1,4 +1,4 @@
-onst { createCanvas, loadImage, registerFont } = require('@napi-rs/canvas');
+nst { createCanvas, loadImage, registerFont } = require('@napi-rs/canvas');
 const path = require('path');
 
 registerFont(

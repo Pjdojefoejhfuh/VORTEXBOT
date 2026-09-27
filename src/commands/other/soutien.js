@@ -1,4 +1,4 @@
-onst { EmbedBuilder } = require('discord.js');
+nst { EmbedBuilder } = require('discord.js');
 const guildConfig = require('../../utils/guildConfig');
 
 module.exports = {

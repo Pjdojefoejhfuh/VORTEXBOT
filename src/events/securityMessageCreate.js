@@ -1,4 +1,4 @@
-onst {
+nst {
     getSecurity,
     isWhitelisted
 } = require('../utils/securityConfig');

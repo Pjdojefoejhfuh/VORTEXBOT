@@ -1,4 +1,4 @@
-onst guildConfig = require('./guildConfig');
+nst guildConfig = require('./guildConfig');
 
 function getPointsData(guildId) {
   const points = guildConfig.get(guildId, 'points') || {};

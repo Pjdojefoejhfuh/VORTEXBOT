@@ -1,4 +1,4 @@
-onst {
+nst {
   PermissionsBitField,
   StringSelectMenuBuilder,
   StringSelectMenuOptionBuilder,

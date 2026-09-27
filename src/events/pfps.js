@@ -1,4 +1,4 @@
-onst {
+nst {
     MediaGalleryBuilder,
     MediaGalleryItemBuilder,
     ContainerBuilder,

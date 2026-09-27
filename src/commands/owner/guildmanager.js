@@ -1,4 +1,4 @@
-onst config = require("../../../config.js");
+nst config = require("../../../config.js");
 const {
     EmbedBuilder,
     PermissionFlagsBits,

@@ -1,4 +1,4 @@
-onst { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
+nst { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()

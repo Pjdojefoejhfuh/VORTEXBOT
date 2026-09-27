@@ -1,4 +1,4 @@
-onst {
+nst {
     SlashCommandBuilder,
     EmbedBuilder,
     ActionRowBuilder,

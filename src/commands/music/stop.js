@@ -1,4 +1,4 @@
-odule.exports = {
+dule.exports = {
   name: "stop",
   run: async (client, message) => {
 

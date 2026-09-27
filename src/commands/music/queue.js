@@ -1,4 +1,4 @@
-odule.exports = {
+dule.exports = {
   name: "queue",
   run: async (client, message) => {
 

@@ -1,4 +1,4 @@
-onst fs = require("fs");
+nst fs = require("fs");
 const path = require("path");
 const {
     InteractionContextType,

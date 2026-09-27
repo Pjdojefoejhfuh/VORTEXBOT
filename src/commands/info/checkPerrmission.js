@@ -1,4 +1,4 @@
-onst { EmbedBuilder, PermissionsBitField } = require('discord.js');
+nst { EmbedBuilder, PermissionsBitField } = require('discord.js');
 
 module.exports = {
   name: 'checkpermission',

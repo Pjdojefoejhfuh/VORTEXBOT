@@ -1,4 +1,4 @@
-onst guildConfig = require('../../utils/guildConfig');
+nst guildConfig = require('../../utils/guildConfig');
 
 module.exports = {
   name: 'setsoutien',

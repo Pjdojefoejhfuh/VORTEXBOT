@@ -1,4 +1,4 @@
-onst {
+nst {
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle,

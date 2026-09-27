@@ -1,4 +1,4 @@
-onst guildConfig = require('./guildConfig');
+nst guildConfig = require('./guildConfig');
 
 const DEFAULTS = {
     antialt: {

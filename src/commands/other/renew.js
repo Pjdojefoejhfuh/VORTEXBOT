@@ -1,4 +1,4 @@
-onst { PermissionsBitField, EmbedBuilder } = require("discord.js");
+nst { PermissionsBitField, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "renew",

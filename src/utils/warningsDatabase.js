@@ -1,4 +1,4 @@
-onst path = require('path');
+nst path = require('path');
 const fs = require('fs');
 const Database = require('better-sqlite3');
 

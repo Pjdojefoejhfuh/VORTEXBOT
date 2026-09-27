@@ -1,4 +1,4 @@
-onst { QueryType } = require("discord-player");
+nst { QueryType } = require("discord-player");
 
 module.exports = {
   name: "play",
