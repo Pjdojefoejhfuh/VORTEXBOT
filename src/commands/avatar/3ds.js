@@ -1,7 +1,7 @@
-const { createCanvas, loadImage, registerFont } = require('@napi-rs/canvas');
+const { createCanvas, loadImage, GlobalFonts } = require('@napi-rs/canvas');
 const path = require('path');
 
-registerFont(path.join(__dirname, '../../assets/fonts/arial.ttf'), {
+GlobalFonts.registerFromPath(path.join(__dirname, '../../assets/fonts/arial.ttf'), 
   family: 'Arial'
 });
 
