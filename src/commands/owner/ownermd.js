@@ -1,4 +1,3 @@
-src/commands/ownermd.js
 module.exports = {
   name: 'ownermd',
   description: 'Affiche le préfixe utilisé par le bot sur le serveur',
