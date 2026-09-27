@@ -1,7 +1,7 @@
 const { createCanvas, loadImage, GlobalFonts } = require('@napi-rs/canvas');
 const path = require('path');
 
-GlobalFonts.registerFromPath(path.join(__dirname, '../../assets/fonts/Noto-Regular.ttf'),  family: 'Noto' });
+GlobalFonts.registerFromPath(path.join(__dirname, '../../assets/fonts/Noto-Regular.ttf'),  'Noto');
 
 module.exports = {
   name: 'steam-carte',

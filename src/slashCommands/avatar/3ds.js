@@ -4,9 +4,7 @@ const path = require('path');
 
 registerFont(
     path.join(__dirname, '../../assets/fonts/arial.ttf'),
-    {
-        family: 'Arial'
-    }
+    'Arial'
 );
 
 module.exports = {

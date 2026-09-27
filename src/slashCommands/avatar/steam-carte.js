@@ -4,7 +4,7 @@ const path = require('path');
 
 registerFont(
     path.join(__dirname, '../../assets/fonts/Noto-Regular.ttf'),
-    { family: 'Noto' }
+    'Noto'
 );
 
 module.exports = {

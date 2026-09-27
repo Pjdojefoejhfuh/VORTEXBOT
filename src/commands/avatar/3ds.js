@@ -2,8 +2,7 @@ const { createCanvas, loadImage, GlobalFonts } = require('@napi-rs/canvas');
 const path = require('path');
 
 GlobalFonts.registerFromPath(path.join(__dirname, '../../assets/fonts/arial.ttf'), 
-  family: 'Arial'
-});
+  'Arial');
 
 module.exports = {
   name: '3ds',

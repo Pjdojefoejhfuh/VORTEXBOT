@@ -3,7 +3,7 @@ const path = require('path');
 
 registerFont(
   path.join(__dirname, '../../assets/fonts/CoffinStone-vmmZL.otf'),
-  { family: 'Coffin Stone' }
+  'Coffin Stone'
 );
 
 module.exports = {
