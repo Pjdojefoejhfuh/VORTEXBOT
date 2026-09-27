@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
     name: "say",
     description: "Faire parler le bot",
     async execute(client, message, args) {

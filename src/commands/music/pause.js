@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: "pause",
   run: async (client, message) => {
 

@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: "resume",
   run: async (client, message) => {
 

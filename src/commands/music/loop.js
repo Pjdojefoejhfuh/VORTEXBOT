@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: "loop",
   run: async (client, message) => {
 

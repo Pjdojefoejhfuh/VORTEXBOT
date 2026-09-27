@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: "queue",
   run: async (client, message) => {
 

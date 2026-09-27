@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
     name: "math",
 
     async execute(message, args) {

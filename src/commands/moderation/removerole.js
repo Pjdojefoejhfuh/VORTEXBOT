@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: 'removerole',
   description: 'Retire un rôle à un membre du serveur',
   async execute(client, message, args) {

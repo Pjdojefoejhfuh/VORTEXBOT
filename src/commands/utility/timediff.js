@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
     name: 'timediff',
     description: 'Affiche la différence de temps entre deux messages via leur ID',
     async execute(client, message, args) {

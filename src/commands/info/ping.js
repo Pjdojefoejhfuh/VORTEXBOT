@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
   name: 'ping',
   description: 'Répond Pong !',
   async execute(client, message, args) {

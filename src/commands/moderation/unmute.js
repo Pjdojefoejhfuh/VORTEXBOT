@@ -1,4 +1,4 @@
-ule.exports = {
+module.exports = {
     name: 'unmute',
     description: 'Unmute un membre du serveur',
     async execute(client, message, args) {
