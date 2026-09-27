@@ -1,0 +1,24 @@
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Environment / Secrets
+.env
+config.js
+token.txt
+*.token
+
+# Data
+data/*.db
+data/*.json
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

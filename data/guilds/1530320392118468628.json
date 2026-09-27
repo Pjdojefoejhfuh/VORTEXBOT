@@ -1,0 +1,210 @@
+{
+  "prefix": "+",
+  "welcomeChannelId": null,
+  "logChannelId": null,
+  "soutienRoleId": null,
+  "soutienStatut": null,
+  "captchaEnabled": true,
+  "antiraidEnabled": true,
+  "muteRoleId": null,
+  "warnRoles": [],
+  "backupLink": null,
+  "serverDescription": null,
+  "antiraidConfig": {
+    "spamLimit": 5,
+    "spamInterval": 2000,
+    "muteDuration": 5,
+    "joinLimit": 10,
+    "joinInterval": 10000,
+    "disableInvites": true
+  },
+  "ticketConfig": {
+    "panelDescription": "Cliquez sur le bouton ci-dessous pour créer un ticket. Notre équipe vous répondra dans les meilleurs délais.",
+    "panelColor": "#5865F2",
+    "logChannelId": null,
+    "ticketCount": 0,
+    "categories": []
+  },
+  "giveawayConfig": {
+    "defaultColor": "#F1C40F",
+    "defaultChannelId": null,
+    "defaultWinners": 1,
+    "managerRoles": []
+  },
+  "pointsConfig": {
+    "messagePoints": 1,
+    "commandPoints": 2,
+    "voicePoints": 1,
+    "crownRoleId": null,
+    "crownSchedule": null
+  },
+  "birthdayConfig": {
+    "channelId": null,
+    "birthdays": {}
+  },
+  "points": {
+    "1474433573174907054": {
+      "current": 111,
+      "total": 111
+    },
+    "1466154033990598818": {
+      "current": 19,
+      "total": 19
+    }
+  },
+  "logChannels": {
+    "member": null,
+    "messages": null,
+    "voice": null,
+    "roles": null,
+    "boost": null,
+    "channels": null,
+    "emojis": null,
+    "webhooks": null,
+    "automod": null,
+    "raid": "1553672899628499004",
+    "server": null
+  },
+  "botOwners": [
+    "1466154033990598818"
+  ],
+  "honeypotChannel": "1552272265079693312",
+  "security": {
+    "antialt": {
+      "enabled": false,
+      "minAccountAge": 604800000,
+      "action": "kick",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antibadword": {
+      "enabled": false,
+      "action": "delete",
+      "words": [],
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antiban": {
+      "enabled": false,
+      "threshold": 1,
+      "action": "ban",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antibot": {
+      "enabled": false,
+      "action": "kick",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antichannel": {
+      "enabled": false,
+      "action": "delete",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antidm": {
+      "enabled": false,
+      "blockBotDMs": false,
+      "managerRoles": []
+    },
+    "antijoin": {
+      "enabled": false,
+      "action": "kick",
+      "maxJoins": 5,
+      "interval": 10000,
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antikick": {
+      "enabled": false,
+      "threshold": 1,
+      "action": "ban",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antilink": {
+      "enabled": false,
+      "action": "delete",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "antimassmention": {
+      "enabled": true,
+      "maxUsers": 5,
+      "maxRoles": 3,
+      "maxTotal": 5,
+      "action": "delete",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "timeout": {
+      "enabled": false,
+      "duration": 600000,
+      "action": "timeout",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "webhook": {
+      "enabled": false,
+      "action": "delete",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "update": {
+      "enabled": false,
+      "action": "delete",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "role": {
+      "enabled": false,
+      "action": "delete",
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "whitelist": {
+      "enabled": true,
+      "users": [],
+      "roles": [],
+      "channels": [],
+      "managerRoles": []
+    },
+    "blacklist": {
+      "enabled": true,
+      "users": [],
+      "roles": [],
+      "managerRoles": []
+    },
+    "serverlink": {
+      "enabled": true,
+      "action": "delete",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    },
+    "spam": {
+      "enabled": false,
+      "maxMessages": 5,
+      "interval": 5000,
+      "duplicateLimit": 3,
+      "action": "delete",
+      "whitelistRoles": [],
+      "whitelistChannels": [],
+      "whitelistUsers": [],
+      "managerRoles": []
+    }
+  },
+  "antiexe": true
+}
