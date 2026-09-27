@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 const { createCanvas, loadImage, GlobalFonts } = require('@napi-rs/canvas');
 const path = require('path');
 
-registerFont(
+GlobalFonts.registerFromPath(
     path.join(__dirname, '../../assets/fonts/Noto-Regular.ttf'),
     'Noto'
 );
