@@ -1,4 +1,3 @@
-src/commands/speed.js
 module.exports = {
   name: 'speed',
   description: 'Affiche la latence du bot et de l\'API Discord',
