@@ -1,4 +1,4 @@
-nst {
+const {
   EmbedBuilder,
   ChannelType
 } = require('discord.js');

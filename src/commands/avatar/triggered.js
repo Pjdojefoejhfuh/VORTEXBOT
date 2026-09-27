@@ -1,4 +1,4 @@
-nst { createCanvas, loadImage } = require('@napi-rs/canvas');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const coord1 = [-25, -33, -42, -14];
 const coord2 = [-25, -13, -34, -10];
 

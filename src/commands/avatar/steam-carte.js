@@ -1,4 +1,4 @@
-nst { createCanvas, loadImage, registerFont } = require('@napi-rs/canvas');
+const { createCanvas, loadImage, registerFont } = require('@napi-rs/canvas');
 const path = require('path');
 
 registerFont(path.join(__dirname, '../../assets/fonts/Noto-Regular.ttf'), { family: 'Noto' });

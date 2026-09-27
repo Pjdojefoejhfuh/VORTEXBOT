@@ -1,4 +1,4 @@
-dule.exports = {
+ule.exports = {
   name: "pause",
   run: async (client, message) => {
 

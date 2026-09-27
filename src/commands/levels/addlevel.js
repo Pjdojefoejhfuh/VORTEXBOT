@@ -1,4 +1,4 @@
-nst config = require("../../../config.js");
+const config = require("../../../config.js");
 const guildconfig = require('../../utils/guildConfig');
 
 module.exports = {

@@ -1,4 +1,4 @@
-nst { EmbedBuilder } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: '8ball',

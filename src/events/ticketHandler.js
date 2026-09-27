@@ -1,4 +1,4 @@
-nst {
+const {
     MessageFlags,
     ActionRowBuilder,
     ButtonBuilder,

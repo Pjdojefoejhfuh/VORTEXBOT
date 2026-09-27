@@ -1,4 +1,4 @@
-dule.exports = {
+ule.exports = {
     name: "allroles",
     description: "Afficher tous les rôles du serveur",
     async execute(client, message, args) {

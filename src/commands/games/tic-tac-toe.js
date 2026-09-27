@@ -1,4 +1,4 @@
-nst {
+const {
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle,

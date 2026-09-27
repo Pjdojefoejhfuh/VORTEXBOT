@@ -1,4 +1,4 @@
-nst { createCanvas, loadImage } = require('@napi-rs/canvas');
+const { createCanvas, loadImage } = require('@napi-rs/canvas');
 const path = require('path');
 module.exports = {
   name: 'xboxone',

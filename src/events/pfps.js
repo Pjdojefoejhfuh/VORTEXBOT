@@ -1,4 +1,4 @@
-nst {
+const {
     MediaGalleryBuilder,
     MediaGalleryItemBuilder,
     ContainerBuilder,

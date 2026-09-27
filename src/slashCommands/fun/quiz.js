@@ -1,4 +1,4 @@
-nst {
+const {
     SlashCommandBuilder,
     EmbedBuilder,
     ActionRowBuilder,

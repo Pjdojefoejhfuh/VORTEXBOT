@@ -1,4 +1,4 @@
-nst { getSecurity } = require('../utils/securityConfig');
+const { getSecurity } = require('../utils/securityConfig');
 const { executeAction, logSecurity } = require('../utils/securityActions');
 
 module.exports = {

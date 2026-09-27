@@ -1,4 +1,4 @@
-nst { PermissionsBitField, EmbedBuilder } = require('discord.js');
+const { PermissionsBitField, EmbedBuilder } = require('discord.js');
 
 module.exports = {
   name: 'addrole',

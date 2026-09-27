@@ -1,4 +1,4 @@
-nst {
+const {
     ModalBuilder,
     TextInputBuilder,
     TextInputStyle,

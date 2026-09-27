@@ -1,4 +1,4 @@
-nst guildConfig = require('../utils/guildConfig');
+const guildConfig = require('../utils/guildConfig');
 const economy = require('../utils/economy');
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 

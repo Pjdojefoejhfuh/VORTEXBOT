@@ -1,4 +1,4 @@
-nst {
+const {
   PermissionFlagsBits,
   EmbedBuilder,
   ActionRowBuilder,

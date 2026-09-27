@@ -1,4 +1,4 @@
-dule.exports = {
+ule.exports = {
   name: 'kick',
   description: 'Expulse un membre du serveur',
   async execute(client, message, args) {

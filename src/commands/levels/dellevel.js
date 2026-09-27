@@ -1,4 +1,4 @@
-nst guildconfig = require('../../utils/guildConfig');
+const guildconfig = require('../../utils/guildConfig');
 
 module.exports = {
     name: "dellevel",

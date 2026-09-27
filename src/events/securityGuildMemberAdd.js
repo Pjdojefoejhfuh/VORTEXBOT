@@ -1,4 +1,4 @@
-nst { getSecurity, isWhitelisted } = require('../utils/securityConfig');
+const { getSecurity, isWhitelisted } = require('../utils/securityConfig');
 const { executeAction, logSecurity } = require('../utils/securityActions');
 
 const joins = new Map();

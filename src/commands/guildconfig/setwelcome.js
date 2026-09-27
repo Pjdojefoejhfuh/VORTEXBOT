@@ -1,4 +1,4 @@
-nst guildConfig = require('../../utils/guildConfig');
+const guildConfig = require('../../utils/guildConfig');
 
 module.exports = {
   name: 'setwelcome',

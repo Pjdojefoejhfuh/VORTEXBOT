@@ -1,4 +1,4 @@
-nst { MessageFlags, ContainerBuilder, TextDisplayBuilder, SeparatorBuilder } = require('discord.js');
+const { MessageFlags, ContainerBuilder, TextDisplayBuilder, SeparatorBuilder } = require('discord.js');
 const { getModule, saveModule, isAdministrator } = require('../../utils/securityConfig');
 
 module.exports = {

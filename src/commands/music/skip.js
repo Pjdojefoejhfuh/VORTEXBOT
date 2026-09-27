@@ -1,4 +1,4 @@
-dule.exports = {
+ule.exports = {
   name: "skip",
   run: async (client, message) => {
 

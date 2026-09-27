@@ -1,4 +1,4 @@
-nst config = require("../../../config.js");
+const config = require("../../../config.js");
 
 module.exports = {
     name: "quitguild",

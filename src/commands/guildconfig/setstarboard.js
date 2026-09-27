@@ -1,4 +1,4 @@
-nst { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
+const { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 const Database = require("better-sqlite3");
 const fs = require("fs");
 const path = require("path");

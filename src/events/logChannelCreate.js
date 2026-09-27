@@ -1,4 +1,4 @@
-nst {
+const {
   AuditLogEvent,
   ChannelType,
   ContainerBuilder,
