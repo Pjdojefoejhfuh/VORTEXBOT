@@ -272,12 +272,30 @@ module.exports = {
 
     message.isBotOwner =
       message.author.id === config.ownerId;
+    // === CHECK_BOT_DISABLED ===
+    if (commandName !== 'closebot') {
+        const _disabled = guildConfig.get(message.guild.id, 'botDisabled');
+        const _isOwner = message.author.id === require('../../config').ownerId;
+        if (_disabled && !_isOwner) {
+            return message.reply("?? Le bot est actuellement verrouille. Seul le proprietaire peut l'utiliser.").catch(() => {});
+        }
+    }
+    // === FIN CHECK_BOT_DISABLED ===
+    // === RESTRICTION_COMMANDES ===
+    const _cfg = require('../../config');
+    const _isBotOwner = message.author.id === _cfg.ownerId;
+    const _isGuildOwner = guildConfig.isBotOwner(message.guild.id, message.author.id);
+    if (!_isBotOwner && !_isGuildOwner) {
+      return message.reply("? Vous n'avez pas la permission d'utiliser cette commande.").catch(() => {});
+    }
+    // === FIN RESTRICTION_COMMANDES ===
 
     try {
       if (
         typeof command.execute === 'function'
       ) {
-        command.execute(
+        
+    command.execute(
           client,
           message,
           args

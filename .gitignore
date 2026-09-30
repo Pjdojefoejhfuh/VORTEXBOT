@@ -1,24 +1,35 @@
-# Node
+﻿# === Dependances ===
 node_modules/
-npm-debug.log
-package-lock.json
 
-# Environment / Secrets
+# === Secrets et config locale ===
 .env
 config.js
-token.txt
-*.token
+config.js.bak
+contenu_complet.txt
+structure.txt
 
-# Data
+# === Backups et fichiers temporaires ===
+*.bak
+*.bak2
+*.old
+*.tmp
+git-push.bat
+
+# === Bases de donnees locales ===
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
 data/*.db
-data/*.json
-logs/
 
-# IDE
-.vscode/
-.idea/
-*.swp
+# === Transcripts generes ===
+transcripts/
+clone_*.json
 
-# OS
+# === OS ===
 .DS_Store
 Thumbs.db
+_Thumbs.db
+
+# === Logs ===
+diagnostic_logs/
+*.log

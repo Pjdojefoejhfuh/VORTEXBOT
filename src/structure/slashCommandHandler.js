@@ -71,6 +71,31 @@ module.exports = (client) => {
     client.on("interactionCreate", async (interaction) => {
         if (!interaction.isChatInputCommand()) return;
 
+        // === RESTRICTION_SLASH ===
+        const _cfg = require('../../config');
+        const _gcfg = require('../utils/guildConfig');
+        const _isBotOwner = interaction.user.id === _cfg.ownerId;
+        const _isGuildOwner = interaction.guild
+            ? _gcfg.isBotOwner(interaction.guild.id, interaction.user.id)
+            : false;
+        if (!_isBotOwner && !_isGuildOwner) {
+            return interaction.reply({
+                content: "? Vous n'avez pas la permission d'utiliser cette commande.",
+                ephemeral: true
+            }).catch(() => {});
+        }
+        // === FIN RESTRICTION_SLASH ===
+        // === CHECK_BOT_DISABLED_SLASH ===
+        const _disabled = interaction.guild ? _gcfg.get(interaction.guild.id, 'botDisabled') : false;
+        if (_disabled && interaction.user.id !== _cfg.ownerId) {
+            return interaction.reply({
+                content: "?? Le bot est actuellement verrouille. Seul le proprietaire peut l'utiliser.",
+                ephemeral: true
+            }).catch(() => {});
+        }
+        // === FIN CHECK_BOT_DISABLED_SLASH ===
+
+
         const command = client.slashCommands.get(
             interaction.commandName
         );
