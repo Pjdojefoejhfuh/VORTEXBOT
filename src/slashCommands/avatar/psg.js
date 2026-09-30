@@ -5,11 +5,11 @@ const path = require('path');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('psg')
-        .setDescription('GÃ©nÃ¨re une image PSG avec un avatar.')
+        .setDescription('Génère une image PSG avec un avatar.')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur Ã  utiliser')
+                .setDescription('Utilisateur à utiliser')
                 .setRequired(false)
         ),
 
@@ -67,12 +67,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur gÃ©nÃ©ration PSG."
+                    "Erreur génération PSG."
                 );
             }
 
             return await interaction.reply(
-                "Erreur gÃ©nÃ©ration PSG."
+                "Erreur génération PSG."
             );
         }
     }

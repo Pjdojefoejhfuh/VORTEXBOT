@@ -5,11 +5,11 @@ const path = require('path');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('roi-lion')
-        .setDescription("Dessine l'avatar d'un utilisateur sur la scÃ¨ne du Roi Lion.")
+        .setDescription("Dessine l'avatar d'un utilisateur sur la scène du Roi Lion.")
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur Ã  utiliser')
+                .setDescription('Utilisateur à utiliser')
                 .setRequired(false)
         ),
 
@@ -62,12 +62,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur lors de la gÃ©nÃ©ration de l'image."
+                    "Erreur lors de la génération de l'image."
                 );
             }
 
             return await interaction.reply(
-                "Erreur lors de la gÃ©nÃ©ration de l'image."
+                "Erreur lors de la génération de l'image."
             );
         }
     }

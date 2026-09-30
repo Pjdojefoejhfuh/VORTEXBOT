@@ -123,14 +123,11 @@ module.exports = {
     async execute(client, message, args) {
         await message.channel.sendTyping();
 
-        // === OWNER_BYPASS_TICKET ===
-        const _cfgTicket = require('../../../config');
-        const _isBotOwner = message.author.id === _cfgTicket.ownerId;
-        const _isAdmin = message.member.permissions.has(PermissionsBitField.Flags.Administrator);
-        if (!_isBotOwner && !_isAdmin) {
-            return message.reply('❌ Vous devez etre administrateur ou proprietaire du bot pour configurer les tickets.');
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+            return message.reply(
+                '❌ Vous devez être administrateur pour configurer les tickets.'
+            );
         }
-        // === FIN OWNER_BYPASS_TICKET ===
 
         const sub = args[0]?.toLowerCase();
         const guildId = message.guild.id;
@@ -147,11 +144,11 @@ module.exports = {
 
                 if (targetChannel.id !== message.channel.id) {
                     message.reply(
-                        `âœ… Panneau de tickets envoyé dans ${targetChannel}.`
+                        `✅ Panneau de tickets envoyé dans ${targetChannel}.`
                     );
                 }
             } catch (err) {
-                message.reply(`âŒ ${err.message}`);
+                message.reply(`❌ ${err.message}`);
             }
 
             return;
@@ -162,12 +159,12 @@ module.exports = {
 
             if (!name) {
                 return message.reply(
-                    `âŒ Utilisez : \`${prefix}ticket addcat <nom> [emoji] [description]\``
+                    `❌ Utilisez : \`${prefix}ticket addcat <nom> [emoji] [description]\``
                 );
             }
 
             if (getCat(tc.categories, name)) {
-                return message.reply('âŒ Cette catégorie existe déjà.');
+                return message.reply('❌ Cette catégorie existe déjà.');
             }
 
             let emoji = null;
@@ -208,7 +205,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… Catégorie **${name}** créée.\n` +
+                `✅ Catégorie **${name}** créée.\n` +
                 `Configurez-la avec :\n` +
                 `- \`${prefix}ticket setrole ${name} @Role\` — accès staff\n` +
                 `- \`${prefix}ticket setcategory ${name} <ID>\` — catégorie Discord\n` +
@@ -221,7 +218,7 @@ module.exports = {
 
             if (!name) {
                 return message.reply(
-                    `âŒ Utilisez : \`${prefix}ticket removecat <nom>\``
+                    `❌ Utilisez : \`${prefix}ticket removecat <nom>\``
                 );
             }
 
@@ -230,7 +227,7 @@ module.exports = {
             );
 
             if (idx === -1) {
-                return message.reply('âŒ Catégorie introuvable.');
+                return message.reply('❌ Catégorie introuvable.');
             }
 
             tc.categories.splice(idx, 1);
@@ -243,7 +240,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… Catégorie **${name}** supprimée.`
+                `✅ Catégorie **${name}** supprimée.`
             );
         }
 
@@ -253,7 +250,7 @@ module.exports = {
 
             if (!role) {
                 return message.reply(
-                    `âŒ Utilisez : \`${prefix}ticket setrole <catégorie> @Role\``
+                    `❌ Utilisez : \`${prefix}ticket setrole <catégorie> @Role\``
                 );
             }
 
@@ -261,7 +258,7 @@ module.exports = {
 
             if (!cat) {
                 return message.reply(
-                    'âŒ Catégorie introuvable. Vérifiez avec `+ticket config`.'
+                    '❌ Catégorie introuvable. Vérifiez avec `+ticket config`.'
                 );
             }
 
@@ -277,7 +274,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… ${role} peut maintenant accéder aux tickets **${cat.name}**.`
+                `✅ ${role} peut maintenant accéder aux tickets **${cat.name}**.`
             );
         }
 
@@ -287,14 +284,14 @@ module.exports = {
 
             if (!role) {
                 return message.reply(
-                    `âŒ Utilisez : \`${prefix}ticket removerole <catégorie> @Role\``
+                    `❌ Utilisez : \`${prefix}ticket removerole <catégorie> @Role\``
                 );
             }
 
             const cat = getCat(tc.categories, catName);
 
             if (!cat) {
-                return message.reply('âŒ Catégorie introuvable.');
+                return message.reply('❌ Catégorie introuvable.');
             }
 
             cat.staffRoles = cat.staffRoles.filter(
@@ -309,7 +306,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… ${role} n'a plus accès aux tickets **${cat.name}**.`
+                `✅ ${role} n'a plus accès aux tickets **${cat.name}**.`
             );
         }
 
@@ -319,7 +316,7 @@ module.exports = {
 
             if (!catName || !discordCatId) {
                 return message.reply(
-                    `âŒ Utilisez : \`${prefix}ticket setcategory <nom> <ID-catégorie-Discord>\``
+                    `❌ Utilisez : \`${prefix}ticket setcategory <nom> <ID-catégorie-Discord>\``
                 );
             }
 
@@ -327,7 +324,7 @@ module.exports = {
 
             if (!cat) {
                 return message.reply(
-                    'âŒ Catégorie de ticket introuvable.'
+                    '❌ Catégorie de ticket introuvable.'
                 );
             }
 
@@ -336,7 +333,7 @@ module.exports = {
 
             if (!discordCat || discordCat.type !== 4) {
                 return message.reply(
-                    'âŒ ID de catégorie Discord invalide.'
+                    '❌ ID de catégorie Discord invalide.'
                 );
             }
 
@@ -350,7 +347,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… Les tickets **${cat.name}** seront créés dans **${discordCat.name}**.`
+                `✅ Les tickets **${cat.name}** seront créés dans **${discordCat.name}**.`
             );
         }
 
@@ -365,7 +362,7 @@ module.exports = {
 
                 if (!desc) {
                     return message.reply(
-                        'âŒ Fournissez une description.'
+                        '❌ Fournissez une description.'
                     );
                 }
 
@@ -379,7 +376,7 @@ module.exports = {
                 );
 
                 return message.reply(
-                    `âœ… Description de **${cat.name}** mise à jour.`
+                    `✅ Description de **${cat.name}** mise à jour.`
                 );
             }
 
@@ -387,7 +384,7 @@ module.exports = {
 
             if (!desc) {
                 return message.reply(
-                    'âŒ Fournissez une description.'
+                    '❌ Fournissez une description.'
                 );
             }
 
@@ -399,7 +396,7 @@ module.exports = {
             );
 
             return message.reply(
-                'âœ… Description du panneau mise à jour.'
+                '✅ Description du panneau mise à jour.'
             );
         }
 
@@ -411,7 +408,7 @@ module.exports = {
                 !color.match(/^#[0-9a-fA-F]{6}$/)
             ) {
                 return message.reply(
-                    `âŒ Ex : \`${prefix}ticket setcolor #5865F2\``
+                    `❌ Ex : \`${prefix}ticket setcolor #5865F2\``
                 );
             }
 
@@ -423,7 +420,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… Couleur définie sur \`${color}\`.`
+                `✅ Couleur définie sur \`${color}\`.`
             );
         }
 
@@ -433,7 +430,7 @@ module.exports = {
 
             if (!channel) {
                 return message.reply(
-                    `âŒ Mentionnez un salon. Ex : \`${prefix}ticket setlog #logs-tickets\``
+                    `❌ Mentionnez un salon. Ex : \`${prefix}ticket setlog #logs-tickets\``
                 );
             }
 
@@ -445,7 +442,7 @@ module.exports = {
             );
 
             return message.reply(
-                `âœ… Logs des tickets définis sur ${channel}.`
+                `✅ Logs des tickets définis sur ${channel}.`
             );
         }
 
@@ -481,7 +478,7 @@ module.exports = {
 
             container.addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
-                    `### âš™ï¸ Configuration générale\n` +
+                    `### ⚙️ Configuration générale\n` +
                     `**Logs** · ${logCh}\n` +
                     `**Couleur** · \`${tc.panelColor || '#5865F2'}\`\n` +
                     `**Description** · ${tc.panelDescription || '*Aucune description*'}`

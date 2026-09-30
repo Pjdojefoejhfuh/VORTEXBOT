@@ -42,7 +42,7 @@ module.exports = {
       const buffer = canvas.toBuffer();
 
       if (buffer.length > 8 * 1024 * 1024) {
-        return message.reply("L'image dÃ©passe 8 Mo.");
+        return message.reply("L'image dépasse 8 Mo.");
       }
 
       await message.channel.send({
@@ -54,7 +54,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      message.reply("Erreur lors de la gÃ©nÃ©ration de l'image.");
+      message.reply("Erreur lors de la génération de l'image.");
     }
   }
 };

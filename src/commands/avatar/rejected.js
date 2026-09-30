@@ -39,7 +39,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      message.reply("Erreur gÃ©nÃ©ration rejected.");
+      message.reply("Erreur génération rejected.");
     }
   }
 };

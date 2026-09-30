@@ -54,7 +54,7 @@ module.exports = {
 
       ctx.fillStyle = 'white';
       ctx.font = '37px Coffin Stone';
-      ctx.fillText('A la mÃ©moire de', 438, 292);
+      ctx.fillText('A la mémoire de', 438, 292);
 
       if (cause) {
         ctx.fillText(cause, 438, 910, 500);
@@ -71,7 +71,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      message.reply("Erreur gÃ©nÃ©ration RIP.");
+      message.reply("Erreur génération RIP.");
     }
   }
 };

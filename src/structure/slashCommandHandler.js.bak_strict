@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 const {
     InteractionContextType,
@@ -57,12 +57,12 @@ module.exports = (client) => {
                 );
             } else {
                 console.log(
-                    `❌ Slash command invalid in file ${file}`
+                    `âŒ Slash command invalid in file ${file}`
                 );
             }
         } catch (error) {
             console.error(
-                `❌ Impossible de charger la slash command ${file}:`,
+                `âŒ Impossible de charger la slash command ${file}:`,
                 error
             );
         }
@@ -70,16 +70,31 @@ module.exports = (client) => {
 
     client.on("interactionCreate", async (interaction) => {
         if (!interaction.isChatInputCommand()) return;
-        // === RESTRICTION_STRICTE_OWNER ===
-        // SEUL l'owner du bot peut utiliser les slash commands.
-        const _cfgStrict = require('../../config');
-        if (interaction.user.id !== _cfgStrict.ownerId) {
+
+        // === RESTRICTION_SLASH ===
+        const _cfg = require('../../config');
+        const _gcfg = require('../utils/guildConfig');
+        const _isBotOwner = interaction.user.id === _cfg.ownerId;
+        const _isGuildOwner = interaction.guild
+            ? _gcfg.isBotOwner(interaction.guild.id, interaction.user.id)
+            : false;
+        if (!_isBotOwner && !_isGuildOwner) {
             return interaction.reply({
                 content: "? Vous n'avez pas la permission d'utiliser cette commande.",
                 ephemeral: true
             }).catch(() => {});
         }
-        // === FIN RESTRICTION_STRICTE_OWNER ===
+        // === FIN RESTRICTION_SLASH ===
+        // === CHECK_BOT_DISABLED_SLASH ===
+        const _disabled = interaction.guild ? _gcfg.get(interaction.guild.id, 'botDisabled') : false;
+        if (_disabled && interaction.user.id !== _cfg.ownerId) {
+            return interaction.reply({
+                content: "?? Le bot est actuellement verrouille. Seul le proprietaire peut l'utiliser.",
+                ephemeral: true
+            }).catch(() => {});
+        }
+        // === FIN CHECK_BOT_DISABLED_SLASH ===
+
 
         const command = client.slashCommands.get(
             interaction.commandName
@@ -87,7 +102,7 @@ module.exports = (client) => {
 
         if (!command) {
             console.log(
-                `❌ Commande slash inconnue : ${interaction.commandName}`
+                `âŒ Commande slash inconnue : ${interaction.commandName}`
             );
             return;
         }
@@ -96,18 +111,18 @@ module.exports = (client) => {
             await command.execute(interaction, client);
         } catch (error) {
             console.error(
-                `❌ Erreur avec /${interaction.commandName}:`,
+                `âŒ Erreur avec /${interaction.commandName}:`,
                 error
             );
 
             if (interaction.replied || interaction.deferred) {
                 await interaction.followUp({
-                    content: "❌ Une erreur est survenue.",
+                    content: "âŒ Une erreur est survenue.",
                     ephemeral: true
                 }).catch(() => {});
             } else {
                 await interaction.reply({
-                    content: "❌ Une erreur est survenue.",
+                    content: "âŒ Une erreur est survenue.",
                     ephemeral: true
                 }).catch(() => {});
             }

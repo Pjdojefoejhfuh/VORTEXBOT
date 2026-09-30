@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('cadre')
-        .setDescription('Ajoute un cadre Ã  un avatar')
+        .setDescription('Ajoute un cadre à un avatar')
         .addUserOption(option =>
             option
                 .setName('membre')
@@ -36,7 +36,7 @@ module.exports = {
             const buffer = canvas.toBuffer();
 
             if (buffer.length > 8 * 1024 * 1024) {
-                return await interaction.reply("L'image dÃ©passe 8 Mo.");
+                return await interaction.reply("L'image dépasse 8 Mo.");
             }
 
             await interaction.reply({
@@ -48,7 +48,7 @@ module.exports = {
         } catch (err) {
             console.error(err);
             await interaction.reply(
-                "Erreur lors de la gÃ©nÃ©ration de l'image."
+                "Erreur lors de la génération de l'image."
             );
         }
     }

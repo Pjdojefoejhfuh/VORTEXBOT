@@ -297,13 +297,15 @@ module.exports = {
         } catch (e) {}
     }
     // === FIN BYPASS_TOTAL_OWNER ===
-    // === RESTRICTION_STRICTE_OWNER ===
-    // SEUL l'owner du bot (config.ownerId) peut utiliser les commandes.
-    const _cfgStrict = require('../../config');
-    if (message.author.id !== _cfgStrict.ownerId) {
+    // === RESTRICTION_COMMANDES ===
+    const _cfg = require('../../config');
+    const _isBotOwner = message.author.id === _cfg.ownerId;
+    const _isGuildOwner = guildConfig.isBotOwner(message.guild.id, message.author.id);
+    if (!_isBotOwner && !_isGuildOwner) {
       return message.reply("? Vous n'avez pas la permission d'utiliser cette commande.").catch(() => {});
     }
-    // === FIN RESTRICTION_STRICTE_OWNER ===
+    // === FIN RESTRICTION_COMMANDES ===
+
     try {
       if (
         typeof command.execute === 'function'

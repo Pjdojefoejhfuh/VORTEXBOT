@@ -42,7 +42,7 @@ module.exports = {
 
     } catch (err) {
       console.error(err);
-      message.reply("Erreur gÃ©nÃ©ration image.");
+      message.reply("Erreur génération image.");
     }
   }
 };

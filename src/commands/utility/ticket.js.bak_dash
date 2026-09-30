@@ -46,7 +46,7 @@ async function sendPanel(channel, guild) {
         new SectionBuilder()
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
-                    `## 🎫 Support — ${guild.name}\n` +
+                    `## 🎫 Support â€” ${guild.name}\n` +
                     (tc.panelDescription || 'Choisissez une catégorie pour ouvrir un ticket.')
                 )
             )
@@ -210,9 +210,9 @@ module.exports = {
             return message.reply(
                 `âœ… Catégorie **${name}** créée.\n` +
                 `Configurez-la avec :\n` +
-                `- \`${prefix}ticket setrole ${name} @Role\` — accès staff\n` +
-                `- \`${prefix}ticket setcategory ${name} <ID>\` — catégorie Discord\n` +
-                `- \`${prefix}ticket setdesc ${name} <texte>\` — description`
+                `- \`${prefix}ticket setrole ${name} @Role\` â€” accès staff\n` +
+                `- \`${prefix}ticket setcategory ${name} <ID>\` â€” catégorie Discord\n` +
+                `- \`${prefix}ticket setdesc ${name} <texte>\` â€” description`
             );
         }
 
@@ -544,17 +544,17 @@ module.exports = {
         }
 
         return message.reply(
-            `**🎫 Système de Tickets — Commandes :**\n` +
-            `\`${prefix}ticket panel [#salon]\` — Envoyer le panneau\n` +
-            `\`${prefix}ticket addcat <nom> [emoji] [desc]\` — Créer une catégorie\n` +
-            `\`${prefix}ticket removecat <nom>\` — Supprimer une catégorie\n` +
-            `\`${prefix}ticket setrole <cat> @Role\` — Accès staff\n` +
-            `\`${prefix}ticket removerole <cat> @Role\` — Retirer un rôle staff\n` +
-            `\`${prefix}ticket setcategory <cat> <ID>\` — Catégorie Discord\n` +
-            `\`${prefix}ticket setdesc [cat] <texte>\` — Description\n` +
-            `\`${prefix}ticket setcolor <#hex>\` — Couleur\n` +
-            `\`${prefix}ticket setlog #salon\` — Logs\n` +
-            `\`${prefix}ticket config\` — Voir la configuration`
+            `**🎫 Système de Tickets â€” Commandes :**\n` +
+            `\`${prefix}ticket panel [#salon]\` â€” Envoyer le panneau\n` +
+            `\`${prefix}ticket addcat <nom> [emoji] [desc]\` â€” Créer une catégorie\n` +
+            `\`${prefix}ticket removecat <nom>\` â€” Supprimer une catégorie\n` +
+            `\`${prefix}ticket setrole <cat> @Role\` â€” Accès staff\n` +
+            `\`${prefix}ticket removerole <cat> @Role\` â€” Retirer un rôle staff\n` +
+            `\`${prefix}ticket setcategory <cat> <ID>\` â€” Catégorie Discord\n` +
+            `\`${prefix}ticket setdesc [cat] <texte>\` â€” Description\n` +
+            `\`${prefix}ticket setcolor <#hex>\` â€” Couleur\n` +
+            `\`${prefix}ticket setlog #salon\` â€” Logs\n` +
+            `\`${prefix}ticket config\` â€” Voir la configuration`
         );
     },
 };

@@ -10,11 +10,11 @@ GlobalFonts.registerFromPath(
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('3ds')
-        .setDescription('GÃ©nÃ¨re une image 3DS avec lâ€™avatar dâ€™un utilisateur')
+        .setDescription('Génère une image 3DS avec lâ€™avatar dâ€™un utilisateur')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur Ã  utiliser')
+                .setDescription('Utilisateur à utiliser')
                 .setRequired(false)
         ),
 
@@ -53,12 +53,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    'Erreur lors de la gÃ©nÃ©ration de lâ€™image.'
+                    'Erreur lors de la génération de lâ€™image.'
                 );
             }
 
             return await interaction.reply(
-                'Erreur lors de la gÃ©nÃ©ration de lâ€™image.'
+                'Erreur lors de la génération de lâ€™image.'
             );
         }
     }

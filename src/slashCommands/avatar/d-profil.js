@@ -10,17 +10,17 @@ GlobalFonts.registerFromPath(
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('d-profil')
-        .setDescription('GÃ©nÃ¨re une image de profil')
+        .setDescription('Génère une image de profil')
         .addUserOption(option =>
             option
                 .setName('membre')
-                .setDescription('Le membre Ã  utiliser')
+                .setDescription('Le membre à utiliser')
                 .setRequired(false)
         )
         .addStringOption(option =>
             option
                 .setName('cause')
-                .setDescription('Cause Ã  afficher sur lâ€™image')
+                .setDescription('Cause à afficher sur lâ€™image')
                 .setRequired(false)
         ),
 
@@ -63,7 +63,7 @@ module.exports = {
             const buffer = canvas.toBuffer();
 
             if (buffer.length > 8 * 1024 * 1024) {
-                return await interaction.reply("L'image dÃ©passe 8 Mo.");
+                return await interaction.reply("L'image dépasse 8 Mo.");
             }
 
             await interaction.reply({
@@ -75,7 +75,7 @@ module.exports = {
         } catch (err) {
             console.error(err);
             await interaction.reply(
-                "Erreur lors de la gÃ©nÃ©ration de l'image."
+                "Erreur lors de la génération de l'image."
             );
         }
     }

@@ -46,7 +46,7 @@ async function sendPanel(channel, guild) {
         new SectionBuilder()
             .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
-                    `## 🎫 Support — ${guild.name}\n` +
+                    `## ðŸŽ« Support â€” ${guild.name}\n` +
                     (tc.panelDescription || 'Choisissez une catégorie pour ouvrir un ticket.')
                 )
             )
@@ -63,14 +63,14 @@ async function sendPanel(channel, guild) {
 
     const catText = tc.categories
         .map(cat =>
-            `${cat.emoji || '🎫'} **${cat.name}**\n` +
+            `${cat.emoji || 'ðŸŽ«'} **${cat.name}**\n` +
             `${cat.description || 'Ouvrir un ticket.'}`
         )
         .join('\n\n');
 
     container.addTextDisplayComponents(
         new TextDisplayBuilder().setContent(
-            catText + '\n\n👇 **Sélectionnez une catégorie ci-dessous**'
+            catText + '\n\nðŸ‘‡ **Sélectionnez une catégorie ci-dessous**'
         )
     );
 
@@ -82,7 +82,7 @@ async function sendPanel(channel, guild) {
                 new ButtonBuilder()
                     .setCustomId(`ticket_create_${cat.id}`)
                     .setLabel('Créer un ticket')
-                    .setEmoji(cat.emoji || '🎫')
+                    .setEmoji(cat.emoji || 'ðŸŽ«')
                     .setStyle(ButtonStyle.Primary)
             )
         );
@@ -97,7 +97,7 @@ async function sendPanel(channel, guild) {
                             label: cat.name,
                             value: cat.id,
                             description: cat.description?.slice(0, 80) || 'Ouvrir un ticket',
-                            emoji: cat.emoji || '🎫',
+                            emoji: cat.emoji || 'ðŸŽ«',
                         }))
                     )
             )
@@ -210,9 +210,9 @@ module.exports = {
             return message.reply(
                 `âœ… Catégorie **${name}** créée.\n` +
                 `Configurez-la avec :\n` +
-                `- \`${prefix}ticket setrole ${name} @Role\` — accès staff\n` +
-                `- \`${prefix}ticket setcategory ${name} <ID>\` — catégorie Discord\n` +
-                `- \`${prefix}ticket setdesc ${name} <texte>\` — description`
+                `- \`${prefix}ticket setrole ${name} @Role\` â€” accès staff\n` +
+                `- \`${prefix}ticket setcategory ${name} <ID>\` â€” catégorie Discord\n` +
+                `- \`${prefix}ticket setdesc ${name} <texte>\` â€” description`
             );
         }
 
@@ -468,7 +468,7 @@ module.exports = {
 
             container.addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(
-                    `## 🎫 Configuration des tickets\n` +
+                    `## ðŸŽ« Configuration des tickets\n` +
                     `-# Gestion du système de support`
                 )
             );
@@ -502,7 +502,7 @@ module.exports = {
                             : '*Non définie*';
 
                         return (
-                            `**${cat.emoji || '🎫'} ${cat.name}**  ·  \`${cat.id}\`\n` +
+                            `**${cat.emoji || 'ðŸŽ«'} ${cat.name}**  ·  \`${cat.id}\`\n` +
                             `> **Accès :** ${roles}\n` +
                             `> **Catégorie :** ${discordCat}\n` +
                             `> **Description :** ${cat.description || '*Aucune*'}`
@@ -512,14 +512,14 @@ module.exports = {
 
                 container.addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(
-                        `### 📂 Catégories · ${tc.categories.length}\n\n` +
+                        `### ðŸ“‚ Catégories · ${tc.categories.length}\n\n` +
                         categoriesText
                     )
                 );
             } else {
                 container.addTextDisplayComponents(
                     new TextDisplayBuilder().setContent(
-                        `### 📂 Catégories\n` +
+                        `### ðŸ“‚ Catégories\n` +
                         `*Aucune catégorie configurée.*`
                     )
                 );
@@ -544,17 +544,17 @@ module.exports = {
         }
 
         return message.reply(
-            `**🎫 Système de Tickets — Commandes :**\n` +
-            `\`${prefix}ticket panel [#salon]\` — Envoyer le panneau\n` +
-            `\`${prefix}ticket addcat <nom> [emoji] [desc]\` — Créer une catégorie\n` +
-            `\`${prefix}ticket removecat <nom>\` — Supprimer une catégorie\n` +
-            `\`${prefix}ticket setrole <cat> @Role\` — Accès staff\n` +
-            `\`${prefix}ticket removerole <cat> @Role\` — Retirer un rôle staff\n` +
-            `\`${prefix}ticket setcategory <cat> <ID>\` — Catégorie Discord\n` +
-            `\`${prefix}ticket setdesc [cat] <texte>\` — Description\n` +
-            `\`${prefix}ticket setcolor <#hex>\` — Couleur\n` +
-            `\`${prefix}ticket setlog #salon\` — Logs\n` +
-            `\`${prefix}ticket config\` — Voir la configuration`
+            `**ðŸŽ« Système de Tickets â€” Commandes :**\n` +
+            `\`${prefix}ticket panel [#salon]\` â€” Envoyer le panneau\n` +
+            `\`${prefix}ticket addcat <nom> [emoji] [desc]\` â€” Créer une catégorie\n` +
+            `\`${prefix}ticket removecat <nom>\` â€” Supprimer une catégorie\n` +
+            `\`${prefix}ticket setrole <cat> @Role\` â€” Accès staff\n` +
+            `\`${prefix}ticket removerole <cat> @Role\` â€” Retirer un rôle staff\n` +
+            `\`${prefix}ticket setcategory <cat> <ID>\` â€” Catégorie Discord\n` +
+            `\`${prefix}ticket setdesc [cat] <texte>\` â€” Description\n` +
+            `\`${prefix}ticket setcolor <#hex>\` â€” Couleur\n` +
+            `\`${prefix}ticket setlog #salon\` â€” Logs\n` +
+            `\`${prefix}ticket config\` â€” Voir la configuration`
         );
     },
 };

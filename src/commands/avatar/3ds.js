@@ -31,7 +31,7 @@ module.exports = {
       });
     } catch (err) {
       console.error(err);
-      message.reply("Erreur lors de la gÃ©nÃ©ration de l'image.");
+      message.reply("Erreur lors de la génération de l'image.");
     }
   }
 };

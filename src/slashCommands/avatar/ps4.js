@@ -5,11 +5,11 @@ const path = require('path');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ps4')
-        .setDescription('GÃ©nÃ¨re une image PS4 avec un avatar.')
+        .setDescription('Génère une image PS4 avec un avatar.')
         .addUserOption(option =>
             option
                 .setName('utilisateur')
-                .setDescription('Utilisateur Ã  utiliser')
+                .setDescription('Utilisateur à utiliser')
                 .setRequired(false)
         ),
 
@@ -69,12 +69,12 @@ module.exports = {
 
             if (interaction.replied || interaction.deferred) {
                 return await interaction.followUp(
-                    "Erreur gÃ©nÃ©ration PS4."
+                    "Erreur génération PS4."
                 );
             }
 
             return await interaction.reply(
-                "Erreur gÃ©nÃ©ration PS4."
+                "Erreur génération PS4."
             );
         }
     }

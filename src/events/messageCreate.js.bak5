@@ -281,29 +281,15 @@ module.exports = {
         }
     }
     // === FIN CHECK_BOT_DISABLED ===
-    // === BYPASS_TOTAL_OWNER ===
-    // Le owner du bot est traite comme s'il avait TOUTES les permissions Discord
-    // (Admin, ManageGuild, ManageRoles, etc.) pour passer toutes les verifs des commandes.
-    const _cfgBypass = require('../../config');
-    if (message.author.id === _cfgBypass.ownerId && message.member) {
-        try {
-            const _origHas = message.member.permissions.has.bind(message.member.permissions);
-            message.member.permissions.has = function(perm) {
-                if (perm === 'Administrator' || perm === 'ADMINISTRATOR' || perm === 8 || perm === 8n) {
-                    return true;
-                }
-                return _origHas(perm);
-            };
-        } catch (e) {}
-    }
-    // === FIN BYPASS_TOTAL_OWNER ===
-    // === RESTRICTION_STRICTE_OWNER ===
-    // SEUL l'owner du bot (config.ownerId) peut utiliser les commandes.
-    const _cfgStrict = require('../../config');
-    if (message.author.id !== _cfgStrict.ownerId) {
+    // === RESTRICTION_COMMANDES ===
+    const _cfg = require('../../config');
+    const _isBotOwner = message.author.id === _cfg.ownerId;
+    const _isGuildOwner = guildConfig.isBotOwner(message.guild.id, message.author.id);
+    if (!_isBotOwner && !_isGuildOwner) {
       return message.reply("? Vous n'avez pas la permission d'utiliser cette commande.").catch(() => {});
     }
-    // === FIN RESTRICTION_STRICTE_OWNER ===
+    // === FIN RESTRICTION_COMMANDES ===
+
     try {
       if (
         typeof command.execute === 'function'
